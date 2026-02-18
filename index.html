@@ -18,10 +18,11 @@
       p { margin: 0 0 13.5px; }
       ul { padding-left: 20px; }
       li { margin-bottom: 6px; }
-      .btn { display: inline-block; padding: 11px 24px; border-radius: 6px; font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer; line-height: 1; text-align: center; border: 1px solid; }
-      .btn:hover { text-decoration: none; }
-      .btn-primary { background-color: #3498db; border-color: #258cd1; color: #fff; }
-      .btn-primary:hover { background-color: #217dbb; border-color: #1c699d; color: #fff; }
+      .btn { display: inline-block; padding: 11px 24px; border-radius: 6px; font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer; line-height: 1; text-align: center; border: 1px solid; transition: opacity 0.15s ease; }
+      .btn:hover, .btn:focus, .btn:active { text-decoration: none; color: #fff; opacity: 0.85; }
+      .btn:active { opacity: 0.7; }
+      .btn-primary { background-color: #3498db; border-color: #3498db; color: #fff; }
+      .btn-primary:hover { background-color: #3498db; border-color: #3498db; color: #fff; }
       .btn-outline { background-color: #fff; border-color: #ccc; color: #000; }
       .btn-outline:hover { border-color: #999; color: #000; }
     </style>
@@ -37,22 +38,23 @@
   <body>
 
     <!-- Content -->
-    <div class="max-w-[790px] text-pretty mx-auto px-4 pt-[40px] pb-[60px]">
+    <div class="max-w-[790px] text-pretty mx-auto px-6 pt-8 pb-[60px]">
 
       <!-- Photo + heading -->
       <div class="flex items-center gap-6 mb-8">
-        <img src="images/will-howard.jpg" alt="Will Howard" class="w-[100px] h-[100px] rounded-full object-cover shrink-0" />
-        <h1 class="m-0 mx-auto">Morlock Software</h1>
+        <img src="images/will-howard.jpg" alt="Will Howard" class="w-[100px] h-[100px] max-sm:w-[80px] max-sm:h-[80px] rounded-full object-cover shrink-0" />
+        <h1 class="m-0 mx-auto max-sm:text-[26px]">Morlock Software</h1>
       </div>
 
-      <p>Morlock Software is me, Will Howard. I'm a former Tech Lead, now independent product engineer for hire. I aim to build solutions that are as simple and easy to use as possible. If I think you don't need to hire an engineer at all and should just use a spreadsheet, I'll tell you that.</p>
+      <p>Morlock Software is me, Will Howard. I'm a former Tech Lead, now independent product engineer for hire.</p>
+      <p>I aim to build solutions that are as straightforward as possible. If I think you don't need to hire an engineer at all and should just use a spreadsheet, I'll tell you that.</p>
 
-      <h2>I can be useful if...</h2>
+      <h2>I am the right person for you if...</h2>
       <ul>
-        <li>You don't have a dedicated engineer, and you need someone reliable to maintain things and handle feature requests</li>
-        <li>You're building a new product (website or app) and want someone who can scope features, talk to users, and make trade-offs between speed and quality, as well as do the engineering</li>
-        <li>You're starting a technical project and want advice on how difficult it is, who you need to hire, or the best way to architect it</li>
-        <li>Very specific: You use Airtable, and want to do something with it that stretches the ability to use no-code tools, such as using it as the backend for a website</li>
+        <li>You don't have a dedicated engineer, and you need someone reliable to handle maintenance and feature requests.</li>
+        <li>You're building a new product (website or app) and want someone who can scope features, talk to users, and make trade-offs between speed and quality, as well as do the engineering.</li>
+        <li>You're starting a technical project and want advice on how difficult it is, who you need to hire, or the best way to architect it.</li>
+        <li>Very specific: You use Airtable, and want to do something that stretches the ability to use no-code tools, such as using it as the backend for a website.</li>
       </ul>
 
       <h2>Getting started</h2>
@@ -64,20 +66,18 @@
       <!-- <p>I'm based in the UK, but don't mind working on US time.</p> -->
 
       <div class="flex flex-col gap-2 w-fit">
-        <a href="https://calendly.com/w-howard/meet-with-will-h" class="btn btn-primary w-fit">Book a free call</a>
+        <a href="https://calendly.com/w-howard/meet-with-will-h" target="_blank" class="btn btn-primary w-fit">Book a free call</a>
         <div class="text-gray-600 text-[13px] font-sans font-medium">Or, send me an email: <span onclick="copyEmail(this)" class="copy-label hover:opacity-80 underline underline-offset-2 cursor-pointer">copy address</span></div>
       </div>
 
       <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
 
       <h2>About</h2>
-      <p>I don't have a ton of experience as an independent contractor as I've been employed for most of my career, but much of my work from past jobs is public:</p>
+      <p>Links: <a href="https://github.com/Will-Howard">GitHub</a>, <a href="https://linkedin.com/in/will-howard-011650a9">LinkedIn</a>, <a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing">CV</a>, and much of my work from past jobs is public:</p>
 
       <p><strong>At <a href="https://bluedot.org/">BlueDot Impact</a>, as a contractor.</strong> Migrated their course platform from an off the shelf service (Bubble) to their own website. Built a sync service that replicates their Airtable database to Postgres, which allows the website to serve their ~10k monthly users. More generally I've been doing much of the infrastructure and feature work on the codebase for the past year.</p>
 
       <p><strong>At the <a href="https://www.centreforeffectivealtruism.org/">Centre for Effective Altruism</a>, as Tech Lead.</strong> Built out our internal data infrastructure, joining up sources from different programmes into a shared data warehouse. Cut cloud costs by ~$60k/year through infrastructure work. Built features for the <a href="https://forum.effectivealtruism.org/">EA Forum</a> and <a href="https://www.lesswrong.com/">LessWrong</a>, examples: Google Doc import, draft comments, analytics for authors, polls.</p>
-
-      <p>Links: <a href="https://github.com/Will-Howard">GitHub</a>, <a href="https://linkedin.com/in/will-howard-011650a9">LinkedIn</a>, <a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing">CV</a></p>
 
       <!-- Not the right fit for: mobile apps, ML/training models, design studio -->
 
@@ -88,7 +88,7 @@
       function copyEmail(el) {
         navigator.clipboard.writeText('w.howard256@gmail.com').then(function() {
           el.textContent = 'copied!';
-          setTimeout(function() { el.textContent = 'copy address'; }, 2000);
+          setTimeout(function() { el.textContent = 'copy address'; }, 800);
         });
       }
     </script>
