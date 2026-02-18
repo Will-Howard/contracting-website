@@ -30,7 +30,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        prefix: 'tw-',
         corePlugins: { preflight: false }
       }
     </script>
@@ -40,26 +39,22 @@
   <body>
 
     <!-- Navbar -->
-    <div class="tw-relative tw-min-h-[60px] tw-mb-[54px] tw-border-0 tw-border-b tw-border-solid tw-border-[#217dbb] tw-bg-[#3498db] tw-font-['Montserrat','Helvetica_Neue',Arial,sans-serif] before:tw-content-[''] before:tw-table after:tw-content-[''] after:tw-table after:tw-clear-both">
-      <div class="tw-mx-auto tw-px-[15px] min-[768px]:tw-w-[750px] min-[992px]:tw-w-[970px]">
-        <div class="min-[768px]:tw-float-left tw-mx-[-15px] min-[768px]:tw-mx-0">
-          <a href="/" class="tw-float-left tw-py-[16.5px] tw-px-[15px] tw-text-[19px] tw-leading-[27px] tw-h-[60px] tw-text-white tw-font-bold tw-no-underline hover:tw-text-white hover:tw-no-underline min-[768px]:tw-ml-[-15px]">Morlock Software</a>
-        </div>
-        <div class="tw-px-[15px] tw-mx-[-15px] min-[768px]:tw-mx-0 tw-float-right">
-          <ul class="tw-list-none tw-p-0 tw-my-[8.25px] tw-mx-[-15px] min-[768px]:tw-float-left min-[768px]:tw-m-0">
-            <li class="tw-float-left"><a href="/about" class="tw-block tw-text-white tw-no-underline tw-leading-[27px] tw-py-[10px] tw-px-[15px] min-[768px]:tw-py-[16.5px] hover:tw-text-white hover:tw-bg-transparent">About</a></li>
-            <li class="tw-float-left"><a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing" class="tw-block tw-text-white tw-no-underline tw-leading-[27px] tw-py-[10px] tw-px-[15px] min-[768px]:tw-py-[16.5px] hover:tw-text-white hover:tw-bg-transparent">CV</a></li>
-          </ul>
+    <nav class="bg-[#3498db] border-0 border-b border-solid border-[#217dbb] mb-[54px]">
+      <div class="max-w-[940px] mx-auto px-4 flex items-center justify-between h-[60px] font-['Montserrat',sans-serif]">
+        <a href="/" class="text-[19px] text-white font-bold no-underline hover:text-white hover:no-underline">Morlock Software</a>
+        <div class="flex gap-6">
+          <a href="/about" class="text-white no-underline hover:text-white">About</a>
+          <a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing" class="text-white no-underline hover:text-white">CV</a>
         </div>
       </div>
-    </div>
+    </nav>
 
     <!-- Content -->
-    <div class="tw-mx-auto tw-px-[15px] min-[768px]:tw-w-[750px] min-[992px]:tw-w-[970px]">
-      <div class="tw-mx-[-15px] after:tw-content-[''] after:tw-table after:tw-clear-both">
+    <div class="max-w-[940px] mx-auto px-4">
+      <div class="md:flex md:gap-8">
 
-        <!-- Main column (2/3) -->
-        <div class="tw-relative tw-min-h-[1px] tw-px-[15px] min-[768px]:tw-float-left min-[768px]:tw-w-2/3">
+        <!-- Main column -->
+        <div class="md:w-2/3">
 
           <p>Morlock Software is me &mdash; Will Howard. I'm a software engineer, most recently Tech Lead at the <a href="https://forum.effectivealtruism.org/">Centre for Effective Altruism</a>, currently contracting with <a href="https://bluedot.org/">BlueDot Impact</a>. I'm working on moving into robotics safety research over the next couple of years, and taking on contract work while I do.</p>
 
@@ -103,23 +98,23 @@
 
         </div>
 
-        <!-- Sidebar (1/3) -->
-        <div class="tw-relative tw-min-h-[1px] tw-px-[15px] min-[768px]:tw-float-left min-[768px]:tw-w-1/3">
-          <h3 class="tw-mt-0">Who am I?</h3>
+        <!-- Sidebar -->
+        <div class="md:w-1/3">
+          <h3 class="mt-0">Who am I?</h3>
           <p>Will Howard, software engineer based in London. Formerly Tech Lead at CEA (EA Forum).</p>
           <p><a href="https://github.com/Will-Howard">GitHub</a> &middot; <a href="https://linkedin.com/in/will-howard-011650a9">LinkedIn</a></p>
 
-          <h3 class="tw-mt-0">Availability</h3>
+          <h3 class="mt-0">Availability</h3>
           <p>Currently available for contract work. Happy to discuss projects of any size.</p>
 
-          <h3 class="tw-mt-0">Contact</h3>
+          <h3 class="mt-0">Contact</h3>
           <p>Email: w.howard256@gmail.com</p>
         </div>
 
       </div>
 
       <!-- Footer -->
-      <div class="tw-my-[40.5px] tw-text-[13px] tw-text-[#aaa] tw-text-center">
+      <div class="my-10 text-[13px] text-[#aaa] text-center">
         &copy; Will Howard (Morlock Software) 2026
       </div>
     </div>

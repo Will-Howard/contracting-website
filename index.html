@@ -24,7 +24,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        prefix: 'tw-',
         corePlugins: { preflight: false }
       }
     </script>
@@ -34,49 +33,40 @@
   <body>
 
     <!-- Navbar -->
-    <div class="tw-relative tw-min-h-[60px] tw-border-0 tw-border-b tw-border-solid tw-border-[#217dbb] tw-bg-[#3498db] tw-font-['Montserrat','Helvetica_Neue',Arial,sans-serif] before:tw-content-[''] before:tw-table after:tw-content-[''] after:tw-table after:tw-clear-both" style="flex-shrink: 0;">
-      <div class="tw-mx-auto tw-px-[15px] min-[768px]:tw-w-[750px] min-[992px]:tw-w-[970px]">
-        <div class="min-[768px]:tw-float-left tw-mx-[-15px] min-[768px]:tw-mx-0">
-          <a href="/" class="tw-float-left tw-py-[16.5px] tw-px-[15px] tw-text-[19px] tw-leading-[27px] tw-h-[60px] tw-text-white tw-font-bold tw-no-underline hover:tw-text-white hover:tw-no-underline min-[768px]:tw-ml-[-15px]">Morlock Software</a>
-        </div>
-        <div class="tw-px-[15px] tw-mx-[-15px] min-[768px]:tw-mx-0 tw-float-right">
-          <ul class="tw-list-none tw-p-0 tw-my-[8.25px] tw-mx-[-15px] min-[768px]:tw-float-left min-[768px]:tw-m-0">
-            <li class="tw-float-left"><a href="/about" class="tw-block tw-text-white tw-no-underline tw-leading-[27px] tw-py-[10px] tw-px-[15px] min-[768px]:tw-py-[16.5px] hover:tw-text-white hover:tw-bg-transparent">About</a></li>
-            <li class="tw-float-left"><a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing" class="tw-block tw-text-white tw-no-underline tw-leading-[27px] tw-py-[10px] tw-px-[15px] min-[768px]:tw-py-[16.5px] hover:tw-text-white hover:tw-bg-transparent">CV</a></li>
-          </ul>
+    <nav class="bg-[#3498db] border-0 border-b border-solid border-[#217dbb] shrink-0">
+      <div class="max-w-[940px] mx-auto px-4 flex items-center justify-between h-[60px] font-['Montserrat',sans-serif]">
+        <a href="/" class="text-[19px] text-white font-bold no-underline hover:text-white hover:no-underline">Morlock Software</a>
+        <div class="flex gap-6">
+          <a href="/about" class="text-white no-underline hover:text-white">About</a>
+          <a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing" class="text-white no-underline hover:text-white">CV</a>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <!-- Main content - vertically centered -->
-    <div style="flex: 1; display: flex; align-items: center;">
-      <div class="tw-mx-auto tw-px-[15px] tw-w-full min-[768px]:tw-w-[750px] min-[992px]:tw-w-[970px]">
+    <!-- Main content -->
+    <div class="flex flex-1 pt-[54px]">
+      <div class="max-w-[940px] mx-auto px-4 w-full">
 
         <!-- Photo + heading -->
-        <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 30px;">
-          <img src="images/will-howard.jpg" alt="Will Howard" class="tw-w-[80px] tw-h-[80px] min-[768px]:tw-w-[120px] min-[768px]:tw-h-[120px]" style="border-radius: 50%; object-fit: cover; flex-shrink: 0;" />
-          <h1>Morlock Software</h1>
+        <div class="flex items-center gap-6 mb-8">
+          <img src="images/will-howard.jpg" alt="Will Howard" class="w-[100px] h-[100px] rounded-full object-cover shrink-0" />
+          <h1>Drop in tech lead for your project</h1>
         </div>
 
         <!-- Intro -->
-        <div style="max-width: 640px;">
+        <div class="max-w-[640px]">
           <p>I'm Will Howard, a software engineer based in London. Most recently Tech Lead at <a href="https://forum.effectivealtruism.org/">CEA</a> (EA Forum, LessWrong), currently contracting with <a href="https://bluedot.org/">BlueDot Impact</a>.</p>
 
           <p>I'm available for contract work &mdash; if you've got a project in mind or want to talk something through, get in touch. <a href="/about">More about my work &rarr;</a></p>
         </div>
 
         <!-- Buttons -->
-        <div style="margin-top: 24px;">
+        <div class="mt-6">
           <a href="javascript:void(0)" onclick="copyEmail(this)" class="btn btn-primary"><span class="copy-label">Copy email</span></a>
           <a href="https://calendly.com/w-howard/meet-with-will-h" class="btn btn-outline" style="margin-left: 8px;">Book a call</a>
         </div>
 
       </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="tw-text-[13px] tw-text-[#aaa] tw-text-center tw-py-[20px]" style="flex-shrink: 0;">
-      &copy; Will Howard (Morlock Software) 2026
     </div>
 
     <script>
