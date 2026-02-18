@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Morlock Software</title>
-    <meta name="description" content="Software engineering for small teams. Will Howard, software engineer based in London.">
+    <meta name="description" content="Independent product engineer. Will Howard — building projects with the habits of a well-run tech team.">
     <style>
       *, *:before, *:after { box-sizing: border-box; }
       html { font-size: 10px; -webkit-text-size-adjust: 100%; }
-      body { font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif; font-size: 15px; line-height: 1.8; color: #555; background-color: #fff; margin: 0; height: 100%; display: flex; flex-direction: column; }
+      body { font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif; font-size: 15px; line-height: 1.8; color: #555; background-color: #fff; margin: 0; }
       a { color: #3498db; text-decoration: none; }
       a:hover, a:focus { color: #1d6fa5; text-decoration: underline; }
       img { vertical-align: middle; border: 0; }
-      h1 { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-weight: 700; line-height: 1.3; color: #333; font-size: 30px; margin: 0; }
+      h1, h2, h3 { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-weight: 700; line-height: 1.3; color: #333; }
+      h1 { font-size: 30px; margin-top: 27px; margin-bottom: 13.5px; }
+      h2 { font-size: 21px; margin-top: 40.5px; margin-bottom: 6.75px; }
       p { margin: 0 0 13.5px; }
+      ul { padding-left: 20px; }
+      li { margin-bottom: 6px; }
       .btn { display: inline-block; padding: 11px 24px; border-radius: 6px; font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 15px; font-weight: 700; text-decoration: none; cursor: pointer; line-height: 1; text-align: center; border: 1px solid; }
       .btn:hover { text-decoration: none; }
       .btn-primary { background-color: #3498db; border-color: #258cd1; color: #fff; }
@@ -33,40 +37,54 @@
   <body>
 
     <!-- Navbar -->
-    <nav class="bg-[#3498db] border-0 border-b border-solid border-[#217dbb] shrink-0">
-      <div class="max-w-[940px] mx-auto px-4 flex items-center justify-between h-[60px] font-['Montserrat',sans-serif]">
+    <nav class="bg-[#3498db] border-0 border-b border-solid border-[#217dbb] mb-[54px]">
+      <div class="max-w-[740px] mx-auto px-4 flex items-center justify-between h-[60px] font-['Montserrat',sans-serif]">
         <a href="/" class="text-[19px] text-white font-bold no-underline hover:text-white hover:no-underline">Morlock Software</a>
         <div class="flex gap-6">
-          <a href="/about" class="text-white no-underline hover:text-white">About</a>
           <a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing" class="text-white no-underline hover:text-white">CV</a>
         </div>
       </div>
     </nav>
 
-    <!-- Main content -->
-    <div class="flex flex-1 pt-[54px]">
-      <div class="max-w-[940px] mx-auto px-4 w-full">
+    <!-- Content -->
+    <div class="max-w-[740px] mx-auto px-4">
 
-        <!-- Photo + heading -->
-        <div class="flex items-center gap-6 mb-8">
-          <img src="images/will-howard.jpg" alt="Will Howard" class="w-[100px] h-[100px] rounded-full object-cover shrink-0" />
-          <h1>Drop in tech lead for your project</h1>
-        </div>
-
-        <!-- Intro -->
-        <div class="max-w-[640px]">
-          <p>I'm Will Howard, a software engineer based in London. Most recently Tech Lead at <a href="https://forum.effectivealtruism.org/">CEA</a> (EA Forum, LessWrong), currently contracting with <a href="https://bluedot.org/">BlueDot Impact</a>.</p>
-
-          <p>I'm available for contract work &mdash; if you've got a project in mind or want to talk something through, get in touch. <a href="/about">More about my work &rarr;</a></p>
-        </div>
-
-        <!-- Buttons -->
-        <div class="mt-6">
-          <a href="javascript:void(0)" onclick="copyEmail(this)" class="btn btn-primary"><span class="copy-label">Copy email</span></a>
-          <a href="https://calendly.com/w-howard/meet-with-will-h" class="btn btn-outline" style="margin-left: 8px;">Book a call</a>
-        </div>
-
+      <!-- Photo + heading -->
+      <div class="flex items-center gap-6 mb-8">
+        <img src="images/will-howard.jpg" alt="Will Howard" class="w-[100px] h-[100px] rounded-full object-cover shrink-0" />
+        <h1 style="margin-top: 0;">Drop in tech lead for your project</h1>
       </div>
+
+      <p>Morlock Software is me, Will Howard. I'm a former Tech Lead, now independent product engineer. I aim to build solutions that are as simple and easy to use as possible. If I think you don't need to hire an engineer at all and should just use a spreadsheet, I'll tell you that.</p>
+
+      <h2>Things you could find me useful for</h2>
+      <ul>
+        <li>You're a small org or project without a dedicated engineer, and you need someone reliable to maintain things and handle ad-hoc feature requests</li>
+        <li>You're building a new product (website or app) and want someone who can scope features, talk to users, and make trade-offs between speed and quality, as well as do the engineering</li>
+        <li>You're starting a technical project and want advice on how difficult it is, who you need to hire, or the best way to architect it</li>
+        <li>Very specific: You use Airtable, and want to do something with it that stretches the ability to use no-code tools, such as using it as the backend for a website</li>
+      </ul>
+
+      <h2>Things you could find me anti-useful for</h2>
+      <ul>
+        <li>Mobile apps</li>
+        <li>Machine Learning proper (i.e. training models)</li>
+        <li>I can design things in a pinch but I'm not aiming to be a design studio</li>
+      </ul>
+
+      <p>I'm happy to start with a small scoped project or a few hours of advice if you want to see how we'd work together. I'm based in the UK, but don't mind working on US time. Please reach out to me by one of the methods below if you'd like to explore working together.</p>
+
+      <p>
+        <a href="javascript:void(0)" onclick="copyEmail(this)" class="btn btn-primary"><span class="copy-label">Copy email</span></a>
+        <a href="https://calendly.com/w-howard/meet-with-will-h" class="btn btn-outline" style="margin-left: 8px;">Book a call</a>
+      </p>
+
+      <p>I don't have a ton of experience as an independent contractor as I've been employed for most of my career, but much of my work from past jobs is public. Here is some of my recent work:</p>
+      <ul>
+        <li>At <a href="https://bluedot.org/">BlueDot Impact</a> as a contractor: Migrated their course platform from an off the shelf service (Bubble) to their own website. Built a sync service that replicates their Airtable database to Postgres, which allows the website to serve their ~10k monthly users. More generally I've been doing much of the infrastructure and feature work on the codebase for the past year.</li>
+        <li>As Tech Lead at the <a href="https://www.centreforeffectivealtruism.org/">Centre for Effective Altruism</a> (my last day job): Built out our internal data infrastructure, joining up sources from different programmes into a shared data warehouse. Cut cloud costs by ~$60k/year through infrastructure work. Built features for the <a href="https://forum.effectivealtruism.org/">EA Forum</a> and <a href="https://www.lesswrong.com/">LessWrong</a>, examples: Google Doc import, draft comments, analytics for authors, polls.</li>
+      </ul>
+
     </div>
 
     <script>
