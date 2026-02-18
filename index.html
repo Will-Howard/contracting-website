@@ -8,11 +8,11 @@
     <style>
       *, *:before, *:after { box-sizing: border-box; }
       html { font-size: 10px; -webkit-text-size-adjust: 100%; }
-      body { font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif; font-size: 15px; line-height: 1.8; color: #555; background-color: #fff; margin: 0; }
+      body { font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif; font-size: 15px; line-height: 1.8; color: #000; background-color: #fff; margin: 0; }
       a { color: #3498db; text-decoration: none; }
       a:hover, a:focus { color: #1d6fa5; text-decoration: underline; }
       img { vertical-align: middle; border: 0; }
-      h1, h2, h3 { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-weight: 700; line-height: 1.3; color: #333; }
+      h1, h2, h3 { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-weight: 700; line-height: 1.3; color: #000; }
       h1 { font-size: 30px; margin-top: 27px; margin-bottom: 13.5px; }
       h2 { font-size: 21px; margin-top: 24px; margin-bottom: 6.75px; }
       p { margin: 0 0 13.5px; }
@@ -22,8 +22,8 @@
       .btn:hover { text-decoration: none; }
       .btn-primary { background-color: #3498db; border-color: #258cd1; color: #fff; }
       .btn-primary:hover { background-color: #217dbb; border-color: #1c699d; color: #fff; }
-      .btn-outline { background-color: #fff; border-color: #ccc; color: #555; }
-      .btn-outline:hover { border-color: #999; color: #333; }
+      .btn-outline { background-color: #fff; border-color: #ccc; color: #000; }
+      .btn-outline:hover { border-color: #999; color: #000; }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -37,7 +37,7 @@
   <body>
 
     <!-- Content -->
-    <div class="max-w-[790px] text-pretty mx-auto px-4 pt-[40px]">
+    <div class="max-w-[790px] text-pretty mx-auto px-4 pt-[40px] pb-[60px]">
 
       <!-- Photo + heading -->
       <div class="flex items-center gap-6 mb-8">
@@ -65,40 +65,30 @@
 
       <div class="flex flex-col gap-2 w-fit">
         <a href="https://calendly.com/w-howard/meet-with-will-h" class="btn btn-primary w-fit">Book a free call</a>
-        <div class="text-gray-500 text-[13px]">Or, send me an email: <span onclick="copyEmail(this)" class="copy-label">copy address</span></div>
+        <div class="text-gray-600 text-[13px] font-sans font-medium">Or, send me an email: <span onclick="copyEmail(this)" class="copy-label hover:opacity-80 underline underline-offset-2 cursor-pointer">copy address</span></div>
       </div>
 
       <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
 
-      <h2>Recent work</h2>
-      <p>I don't have a ton of experience as an independent contractor as I've been employed for most of my career, but much of my work from past jobs is public. Here is some of my recent work:</p>
-      <ul>
-        <li>At <a href="https://bluedot.org/">BlueDot Impact</a> as a contractor: Migrated their course platform from an off the shelf service (Bubble) to their own website. Built a sync service that replicates their Airtable database to Postgres, which allows the website to serve their ~10k monthly users. More generally I've been doing much of the infrastructure and feature work on the codebase for the past year.</li>
-        <li>As Tech Lead at the <a href="https://www.centreforeffectivealtruism.org/">Centre for Effective Altruism</a> (my last day job): Built out our internal data infrastructure, joining up sources from different programmes into a shared data warehouse. Cut cloud costs by ~$60k/year through infrastructure work. Built features for the <a href="https://forum.effectivealtruism.org/">EA Forum</a> and <a href="https://www.lesswrong.com/">LessWrong</a>, examples: Google Doc import, draft comments, analytics for authors, polls.</li>
-      </ul>
+      <h2>About</h2>
+      <p>I don't have a ton of experience as an independent contractor as I've been employed for most of my career, but much of my work from past jobs is public:</p>
 
-      <h2>Not the right fit for</h2>
-      <ul>
-        <li>Mobile apps</li>
-        <li>Machine Learning proper (i.e. training models)</li>
-        <li>I can design things in a pinch but I'm not aiming to be a design studio</li>
-      </ul>
+      <p><strong>At <a href="https://bluedot.org/">BlueDot Impact</a>, as a contractor.</strong> Migrated their course platform from an off the shelf service (Bubble) to their own website. Built a sync service that replicates their Airtable database to Postgres, which allows the website to serve their ~10k monthly users. More generally I've been doing much of the infrastructure and feature work on the codebase for the past year.</p>
 
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing">CV</a></li>
-        <li><a href="https://github.com/Will-Howard">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/will-howard-011650a9">LinkedIn</a></li>
-      </ul>
+      <p><strong>At the <a href="https://www.centreforeffectivealtruism.org/">Centre for Effective Altruism</a>, as Tech Lead.</strong> Built out our internal data infrastructure, joining up sources from different programmes into a shared data warehouse. Cut cloud costs by ~$60k/year through infrastructure work. Built features for the <a href="https://forum.effectivealtruism.org/">EA Forum</a> and <a href="https://www.lesswrong.com/">LessWrong</a>, examples: Google Doc import, draft comments, analytics for authors, polls.</p>
+
+      <p>Links: <a href="https://github.com/Will-Howard">GitHub</a>, <a href="https://linkedin.com/in/will-howard-011650a9">LinkedIn</a>, <a href="https://drive.google.com/file/d/1KgTX_Mv4OiXufFfokOqVvyE2P-cj9PgY/view?usp=sharing">CV</a></p>
+
+      <!-- Not the right fit for: mobile apps, ML/training models, design studio -->
+
 
     </div>
 
     <script>
       function copyEmail(el) {
         navigator.clipboard.writeText('w.howard256@gmail.com').then(function() {
-          var label = el.querySelector('.copy-label');
-          label.textContent = 'Copied!';
-          setTimeout(function() { label.textContent = 'Copy email'; }, 2000);
+          el.textContent = 'copied!';
+          setTimeout(function() { el.textContent = 'copy address'; }, 2000);
         });
       }
     </script>
