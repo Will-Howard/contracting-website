@@ -46,17 +46,18 @@ for (const file of htmlFiles) {
   );
   html = html.replace("</style>", `\n${tailwindCss}\n    </style>`);
 
-  // 4. Inline images as base64 data URIs
-  html = html.replace(/src="images\/([^"]+)"/g, (_match, imgFile: string) => {
+  // 4. Inline images as base64 data URIs (src= and href= for favicons)
+  const inlineImage = (_match: string, attr: string, imgFile: string) => {
     const srcPath = resolve(SRC, "images", imgFile);
     const buf = readFileSync(srcPath);
     const base64 = buf.toString("base64");
     const ext = imgFile.split(".").pop();
-    const mimeType =
-      ext === "webp" ? "image/webp" : ext === "png" ? "image/png" : "image/jpeg";
+    const mimeTypes: Record<string, string> = { webp: "image/webp", png: "image/png", ico: "image/x-icon", jpg: "image/jpeg", jpeg: "image/jpeg" };
+    const mimeType = mimeTypes[ext || ""] || "image/png";
     console.log(`  Inlined ${imgFile} (${Math.round(buf.length / 1024)}KB)`);
-    return `src="data:${mimeType};base64,${base64}"`;
-  });
+    return `${attr}="data:${mimeType};base64,${base64}"`;
+  };
+  html = html.replace(/(src|href)="images\/([^"]+)"/g, inlineImage);
 
   // 5. Inline Google Fonts (CSS + subsetted font files as base64)
   const fontLinkRegex = /<link[^>]+fonts\.googleapis\.com[^>]+>/g;
