@@ -123,7 +123,7 @@ for (const file of htmlFiles) {
 }
 
 // Copy static files to dist
-for (const f of ["serve.json", "_headers", "images/favicon.ico", "images/will-howard.webp"]) {
+for (const f of ["serve.json", "_headers", "images/favicon.ico", "images/og.png"]) {
   const src = resolve(SRC, f);
   try {
     mkdirSync(dirname(resolve(DIST, f)), { recursive: true });
