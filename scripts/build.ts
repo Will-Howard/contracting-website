@@ -22,7 +22,8 @@ const tailwindCss = execSync(
 console.log(`  Tailwind CSS: ${Math.round(tailwindCss.length / 1024)}KB`);
 
 // 2. Collect all unique characters across all HTML files
-const htmlFiles = readdirSync(SRC).filter((f) => f.endsWith(".html"));
+// Only build files that don't start with _ (convention: _about.html = draft/template)
+const htmlFiles = readdirSync(SRC).filter((f) => f.endsWith(".html") && !f.startsWith("_"));
 const allChars = new Set<string>();
 for (const file of htmlFiles) {
   const html = readFileSync(resolve(SRC, file), "utf-8");
