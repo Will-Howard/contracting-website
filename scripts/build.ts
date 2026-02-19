@@ -122,11 +122,13 @@ for (const file of htmlFiles) {
   console.log(`Built ${file}`);
 }
 
-// Copy serve.json to dist
-writeFileSync(
-  resolve(DIST, "serve.json"),
-  readFileSync(resolve(ROOT, "serve.json"))
-);
+// Copy static files to dist
+for (const f of ["serve.json", "_headers"]) {
+  const src = resolve(SRC, f);
+  try {
+    writeFileSync(resolve(DIST, f), readFileSync(src));
+  } catch {}
+}
 
 // Clean up
 rmSync(TMP, { recursive: true });
