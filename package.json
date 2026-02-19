@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "npx tsx scripts/build.ts",
+    "dev": "npx serve src",
+    "start": "npx tsx scripts/build.ts && npx serve dist"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
